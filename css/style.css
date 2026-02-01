@@ -196,6 +196,21 @@ header {
   color: var(--navy);
 }
 
+.logo-img {
+  height: 80px;
+  /* Ajuste a altura conforme necessário (40px a 60px é padrão) */
+  width: auto;
+  /* Mantém a proporção */
+  display: block;
+}
+
+/* Ajuste fino para o container da logo não ter margens estranhas */
+a.logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
 /* Hero Section */
 .hero {
   padding: 6rem 1.5rem;
