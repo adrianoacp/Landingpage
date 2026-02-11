@@ -62,6 +62,7 @@
       </a>
       <nav>
         <a href="#metodologia">Metodologia</a>
+        <a href="#plataforma">Plataforma</a>
         <a href="#diferenciais">Diferenciais</a>
         <a href="#faq">FAQ</a>
         <a href="#cta-final" class="btn-outline-dark" style="font-size: 0.9rem; padding: 0.5rem 1.2rem;">Fale
@@ -73,6 +74,9 @@
   <main>
     <!-- ========== HERO ========== -->
     <section class="hero" id="hero">
+      <!-- Animated particles canvas -->
+      <canvas id="particles-canvas" style="position:absolute;inset:0;z-index:1;pointer-events:none;"></canvas>
+
       <!-- Floating orbs background -->
       <div class="hero-visual" aria-hidden="true">
         <div class="hero-orb hero-orb-1"></div>
@@ -104,8 +108,7 @@
             </a>
             <a href="#metodologia" class="btn-outline">
               <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M19 9l-7 7-7-7"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg>
               Conheça a Metodologia
             </a>
@@ -159,8 +162,7 @@
           </div>
           <div class="trust-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
             </svg>
             Conformidade NR-01
           </div>
@@ -182,8 +184,8 @@
           <div class="card reveal">
             <div class="card-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z">
+                </path>
               </svg>
             </div>
             <h3>Identificação objetiva</h3>
@@ -200,7 +202,8 @@
               </svg>
             </div>
             <h3>Avaliação estruturada</h3>
-            <p>Escalas validadas cientificamente, aplicação anônima e segura, coleta digital com acesso via dispositivos.
+            <p>Escalas validadas cientificamente, aplicação anônima e segura, coleta digital com acesso via
+              dispositivos.
             </p>
           </div>
 
@@ -322,6 +325,170 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ========== NOSSA PLATAFORMA / SISTEMA ========== -->
+    <section class="section-padding bg-light" id="plataforma">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Nossa Plataforma</span>
+          <h2>Tecnologia e expertise humana trabalhando juntas</h2>
+          <p>Nossa plataforma digital apoia o processo de coleta e análise, mas <strong>a interpretação e o relatório
+              final são conduzidos por psicólogos especializados</strong> — garantindo profundidade técnica e
+            sensibilidade clínica.</p>
+        </div>
+
+        <!-- Coleta de Dados -->
+        <div class="feature-row reveal">
+          <div class="feature-text">
+            <span class="section-label">Coleta</span>
+            <h3>Plataforma de Coleta de Dados</h3>
+            <p>Interface amigável e acessível via qualquer dispositivo. Os colaboradores respondem com anonimato
+              garantido e a empresa acompanha a adesão em tempo real.</p>
+            <ul class="check-list">
+              <li>Interface responsiva (mobile e desktop)</li>
+              <li>Anonimato total do respondente</li>
+              <li>Painel de acompanhamento para gestores</li>
+            </ul>
+          </div>
+          <div class="feature-img">
+            <!--
+              📁 INSTRUÇÃO: Coloque a imagem da tela de coleta na pasta:
+              ../assets/images/sistema-coleta.png
+              (Tamanho recomendado: 800x500px ou proporcional)
+            -->
+            <div class="screenshot-placeholder">
+              <div class="browser-mockup">
+                <img src="../assets/images/sistema-coleta.png"
+                  alt="Tela do sistema de coleta de dados — avaliação de riscos psicossociais" class="img-fluid"
+                  style="border-radius: 0 0 8px 8px; width: 100%; background: var(--off-white); min-height: 280px; object-fit: cover;"
+                  onerror="this.style.display='none'; this.parentElement.nextElementSibling.style.display='flex';">
+              </div>
+              <div class="placeholder-fallback"
+                style="display:none; align-items:center; justify-content:center; min-height:280px; background:var(--off-white); border-radius:8px; border: 2px dashed var(--gray-light); text-align:center; padding: 2rem; color: var(--gray);">
+                <div>
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                    style="margin-bottom:1rem;">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                    <polyline points="21 15 16 10 5 21"></polyline>
+                  </svg>
+                  <p style="font-weight:600; margin-bottom:0.25rem;">sistema-coleta.png</p>
+                  <p style="font-size:0.8rem; margin:0;">Coloque em: assets/images/</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dashboard de Análise -->
+        <div class="feature-row reverse reveal">
+          <div class="feature-img">
+            <!--
+              📁 INSTRUÇÃO: Coloque a imagem do dashboard na pasta:
+              ../assets/images/sistema-dashboard.png
+              (Tamanho recomendado: 800x500px ou proporcional)
+            -->
+            <div class="screenshot-placeholder">
+              <div class="browser-mockup">
+                <img src="../assets/images/sistema-dashboard.png" alt="Dashboard de análise de riscos psicossociais"
+                  class="img-fluid"
+                  style="border-radius: 0 0 8px 8px; width: 100%; background: var(--off-white); min-height: 280px; object-fit: cover;"
+                  onerror="this.style.display='none'; this.parentElement.nextElementSibling.style.display='flex';">
+              </div>
+              <div class="placeholder-fallback"
+                style="display:none; align-items:center; justify-content:center; min-height:280px; background:var(--off-white); border-radius:8px; border: 2px dashed var(--gray-light); text-align:center; padding: 2rem; color: var(--gray);">
+                <div>
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                    style="margin-bottom:1rem;">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                    <polyline points="21 15 16 10 5 21"></polyline>
+                  </svg>
+                  <p style="font-weight:600; margin-bottom:0.25rem;">sistema-dashboard.png</p>
+                  <p style="font-size:0.8rem; margin:0;">Coloque em: assets/images/</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="feature-text">
+            <span class="section-label">Análise</span>
+            <h3>Dashboard de Análise e Relatórios</h3>
+            <p>Visualize os dados processados em tempo real com gráficos interativos, matrizes de risco e segmentações
+              por setor, cargo e variáveis sociodemográficas.</p>
+            <ul class="check-list">
+              <li>Gráficos executivos interativos</li>
+              <li>Segmentação múltipla dos dados</li>
+              <li>Exportação para relatório técnico</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Relatório Final -->
+        <div class="feature-row reveal">
+          <div class="feature-text">
+            <span class="section-label">Relatório</span>
+            <h3>Relatório Técnico — Elaborado por Psicólogos</h3>
+            <p>O relatório final não é gerado automaticamente. Ele é <strong>elaborado e assinado por psicólogos
+                especializados</strong>, que interpretam os dados com rigor clínico e contextualizam os achados à
+              realidade da sua organização.</p>
+            <ul class="check-list">
+              <li>Análise interpretativa por profissional de psicologia</li>
+              <li>Contextualização organizacional dos dados</li>
+              <li>Sugestões de intervenção baseadas em evidências</li>
+              <li>Documento pronto para PGR e auditorias</li>
+            </ul>
+          </div>
+          <div class="feature-img">
+            <!--
+              📁 INSTRUÇÃO: Coloque a imagem/preview do relatório na pasta:
+              ../assets/images/relatorio-preview.png
+              (Tamanho recomendado: 800x500px ou proporcional)
+            -->
+            <div class="screenshot-placeholder">
+              <img src="../assets/images/relatorio-preview.png"
+                alt="Preview do relatório técnico de riscos psicossociais" class="img-fluid img-shadow"
+                style="width: 100%; background: var(--white); min-height: 280px; object-fit: cover;"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="placeholder-fallback"
+                style="display:none; align-items:center; justify-content:center; min-height:280px; background:var(--off-white); border-radius:8px; border: 2px dashed var(--gray-light); text-align:center; padding: 2rem; color: var(--gray);">
+                <div>
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                    style="margin-bottom:1rem;">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                    <polyline points="21 15 16 10 5 21"></polyline>
+                  </svg>
+                  <p style="font-weight:600; margin-bottom:0.25rem;">relatorio-preview.png</p>
+                  <p style="font-size:0.8rem; margin:0;">Coloque em: assets/images/</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Human Touch Banner -->
+        <div class="reveal" style="margin-top: 3rem;">
+          <div
+            style="background: var(--gradient-card); border: 1px solid rgba(31,166,168,0.15); border-radius: 12px; padding: 2rem; display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
+            <div style="flex-shrink:0;">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#1FA6A8" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                </path>
+              </svg>
+            </div>
+            <div>
+              <h3 style="margin-bottom: 0.35rem;">Tecnologia com toque humano</h3>
+              <p style="margin: 0; color: var(--gray); font-size: 0.95rem;">A plataforma automatiza a coleta e o
+                processamento, mas o olhar clínico de psicólogos especializados é insubstituível na elaboração do
+                relatório final. Acreditamos que dados ganham significado quando interpretados por pessoas capacitadas.
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -527,8 +694,7 @@
           <h2>Sua empresa precisa estar em conformidade com a NR-01</h2>
           <p>Fale com especialistas técnicos, não com vendedores. Agende uma conversa sem compromisso e entenda como
             adequar sua organização.</p>
-          <a href="https://calendar.google.com/" target="_blank" rel="noopener" class="btn-primary"
-            id="cta-bottom"
+          <a href="https://calendar.google.com/" target="_blank" rel="noopener" class="btn-primary" id="cta-bottom"
             style="background: var(--white); color: var(--navy); font-size: 1.1rem; padding: 1.1rem 2.5rem;">
             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

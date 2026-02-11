@@ -1,7 +1,104 @@
 /* ============================================================
    Clareia Analytics — Main JS
-   Scroll animations, counter, FAQ, sticky header
+   Scroll animations, counter, FAQ, sticky header, particles
    ============================================================ */
+
+// ========== Particle System ==========
+function initParticles(canvasId) {
+  const canvas = document.getElementById(canvasId);
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  let particles = [];
+  let animId;
+  const PARTICLE_COUNT = 50;
+  const CONNECTION_DISTANCE = 120;
+
+  function resize() {
+    const parent = canvas.parentElement;
+    canvas.width = parent.offsetWidth;
+    canvas.height = parent.offsetHeight;
+  }
+
+  function createParticles() {
+    particles = [];
+    for (let i = 0; i < PARTICLE_COUNT; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5,
+        radius: Math.random() * 2 + 1,
+        opacity: Math.random() * 0.4 + 0.1
+      });
+    }
+  }
+
+  function drawParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw connections
+    for (let i = 0; i < particles.length; i++) {
+      for (let j = i + 1; j < particles.length; j++) {
+        const dx = particles[i].x - particles[j].x;
+        const dy = particles[i].y - particles[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < CONNECTION_DISTANCE) {
+          const opacity = (1 - dist / CONNECTION_DISTANCE) * 0.15;
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.strokeStyle = `rgba(110, 211, 207, ${opacity})`;
+          ctx.lineWidth = 0.5;
+          ctx.stroke();
+        }
+      }
+    }
+
+    // Draw particles
+    particles.forEach(p => {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(159, 214, 255, ${p.opacity})`;
+      ctx.fill();
+    });
+  }
+
+  function updateParticles() {
+    particles.forEach(p => {
+      p.x += p.vx;
+      p.y += p.vy;
+
+      // Wrap around edges
+      if (p.x < 0) p.x = canvas.width;
+      if (p.x > canvas.width) p.x = 0;
+      if (p.y < 0) p.y = canvas.height;
+      if (p.y > canvas.height) p.y = 0;
+    });
+  }
+
+  function animate() {
+    drawParticles();
+    updateParticles();
+    animId = requestAnimationFrame(animate);
+  }
+
+  resize();
+  createParticles();
+  animate();
+
+  // Debounced resize
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      resize();
+      createParticles();
+    }, 250);
+  });
+}
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -130,5 +227,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // ========== Init Particles ==========
+  initParticles('particles-canvas');
 
 });

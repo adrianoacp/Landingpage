@@ -4,11 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="color-scheme" content="light only">
-  <meta name="theme-color" content="#FFFFFF">
+  <meta name="theme-color" content="#0F2742">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clareia Analytics | Inteligência em Riscos Psicossociais</title>
   <meta name="description"
     content="Consultoria especializada em dados e psicologia organizacional. Soluções para NR-01, PGR e gestão de pessoas baseada em evidências.">
+  <meta name="keywords"
+    content="riscos psicossociais, NR-01, PGR, saúde psicológica no trabalho, avaliação de riscos psicossociais, gestão de riscos psicossociais">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,100 +21,156 @@
 
 <body>
 
-  <header>
+  <header id="header">
     <div class="container nav-container">
       <a href="/" class="logo">
         <img src="assets/images/logo.png" alt="Clareia Analytics" class="logo-img">
       </a>
       <nav>
-        <a href="avaliacao-riscos-psicossociais-nr01/" class="btn-outline"
-          style="font-size: 0.9rem; padding: 0.5rem 1rem;">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#expertise">Expertise</a>
+        <a href="avaliacao-riscos-psicossociais-nr01/" class="btn-outline-dark"
+          style="font-size: 0.9rem; padding: 0.5rem 1.2rem;">Avaliação NR-01</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero" style="position: relative; overflow: hidden;">
-      <div class="bg-decorator" style="top: -50px; right: -100px; width: 600px; height: 600px; opacity: 0.1;">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-          <path fill="none" stroke="#127C84" stroke-width="0.8"
-            d="M42.7,-72.8C56.1,-66.2,68.4,-57.6,77.3,-46.5C86.2,-35.4,91.7,-21.8,90.4,-8.6C89.1,4.6,81,17.4,73,29.4C65,41.4,57.1,52.6,46.9,62.1C36.7,71.6,24.2,79.4,10.6,81.8C-3,84.1,-17.7,81.1,-31.2,74.7C-44.7,68.3,-56.9,58.6,-66.6,46.8C-76.3,35,-83.4,21.1,-84.3,6.8C-85.2,-7.5,-79.9,-22.2,-70.8,-34.6C-61.7,-47,-48.8,-57.1,-35.7,-63.8C-22.6,-70.5,-9.3,-73.8,2.7,-78.1L14.7,-98.5"
-            transform="translate(100 100)" />
-          <path fill="none" stroke="#0F2742" stroke-width="0.5"
-            d="M35.6,-60.7C46.8,-55.2,57,-48,64.4,-38.7C71.8,-29.5,76.4,-18.2,75.3,-7.2C74.3,3.8,67.5,14.5,60.8,24.5C54.2,34.5,47.6,43.8,39.1,51.7C30.6,59.7,20.2,66.2,8.8,68.2C-2.5,70.1,-14.8,67.6,-26,62.2C-37.2,56.9,-47.4,48.8,-55.5,39C-63.6,29.2,-69.5,17.6,-70.2,5.7C-71,-6.2,-66.6,-18.5,-59,-28.8C-51.4,-39.2,-40.7,-47.6,-29.7,-53.2C-18.8,-58.8,-7.7,-61.5,2.3,-65.1L12.3,-82.1"
-            transform="translate(100 100)" />
-        </svg>
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+      <canvas id="particles-canvas" style="position:absolute;inset:0;z-index:1;pointer-events:none;"></canvas>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
       </div>
-      <div class="container hero-split">
+
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            Dados organizados. Decisões mais humanas.
+          </div>
+
+          <h1>Inteligência de Dados para Saúde Psicológica no Trabalho</h1>
+
+          <p>Transformamos dados complexos em diagnósticos claros e acionáveis, combinando psicologia organizacional e
+            análise estatística para decisões baseadas em evidências.</p>
+
+          <div class="hero-actions">
+            <a href="avaliacao-riscos-psicossociais-nr01/" class="btn-primary">
+              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+              Conheça a Avaliação NR-01
+            </a>
+            <a href="#expertise" class="btn-outline">
+              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+              Nossa Expertise
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section-padding bg-white">
+    <!-- ========== EXPERTISE ========== -->
+    <section class="section-padding bg-white" id="expertise">
       <div class="container">
-        <div class="text-center" style="margin-bottom: 3rem;">
+        <div class="section-header reveal">
+          <span class="section-label">O que fazemos</span>
           <h2>Nossa Expertise</h2>
+          <p>Soluções técnicas para organizações que levam a saúde psicológica a sério.</p>
         </div>
-        <div class="grid-3">
-          <div class="card">
+
+        <div class="grid-3 stagger">
+          <div class="card reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                </path>
+              </svg>
+            </div>
             <h3>Avaliação de Riscos (NR-01)</h3>
-            <p>Mapeamento técnico e documentado para conformidade legal e integração ao PGR.</p>
+            <p>Mapeamento técnico e documentado de riscos psicossociais para conformidade legal e integração ao PGR.</p>
             <a href="avaliacao-riscos-psicossociais-nr01/" style="font-size: 0.9rem;">Saiba mais &rarr;</a>
           </div>
-          <div class="card">
+
+          <div class="card reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                </path>
+              </svg>
+            </div>
             <h3>Análise de Dados de RH</h3>
-            <p>Transformamos planilhas complexas em dashboards claros para suporte à decisão.</p>
+            <p>Transformamos planilhas complexas em dashboards claros para suporte à decisão estratégica de pessoas.</p>
           </div>
-          <div class="card">
+
+          <div class="card reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z">
+                </path>
+              </svg>
+            </div>
             <h3>Consultoria Técnica</h3>
-            <p>Apoio especializado para SESMT e RH na estruturação de processos psicossociais.</p>
+            <p>Apoio especializado para SESMT e RH na estruturação de processos psicossociais com rigor metodológico.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section-padding bg-light">
-      <div class="container grid-2" style="align-items: center;">
-        <div>
-          <h2>A Clareia Analytics</h2>
-          <p>Nascemos da necessidade de trazer <strong>rigor técnico</strong> para uma área muitas vezes tratada com
-            subjetividade.</p>
-          <p>Nossa missão é entregar evidências. Acreditamos que para cuidar das pessoas de verdade, as organizações
-            precisam de diagnósticos precisos, não de suposições.</p>
-        </div>
-        <div style="text-align: center;">
-          <div
-            style="background: var(--navy); width: 150px; height: 150px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; color: white; font-weight: bold; font-size: 3rem; font-family: 'Montserrat';">
-            CA
+    <!-- ========== SOBRE ========== -->
+    <section class="section-padding bg-light" id="sobre">
+      <div class="container">
+        <div class="grid-2" style="align-items: center;">
+          <div class="reveal-left">
+            <span class="section-label">Quem somos</span>
+            <h2>A Clareia Analytics</h2>
+            <div class="accent-line"></div>
+            <p>Nascemos da necessidade de trazer <strong>rigor técnico</strong> para uma área muitas vezes tratada com
+              subjetividade.</p>
+            <p>Nossa missão é entregar evidências. Acreditamos que para cuidar das pessoas de verdade, as organizações
+              precisam de diagnósticos precisos, não de suposições.</p>
+            <a href="avaliacao-riscos-psicossociais-nr01/" class="btn-primary" style="margin-top: 1rem;">
+              Conheça nosso serviço principal &rarr;
+            </a>
+          </div>
+          <div class="reveal-right" style="text-align: center;">
+            <div
+              style="background: var(--gradient-hero); width: 180px; height: 180px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; color: white; font-weight: 800; font-size: 3.5rem; font-family: 'Inter'; box-shadow: var(--shadow-lg);">
+              CA
+            </div>
+            <p style="margin-top: 1.5rem; color: var(--gray); font-size: 0.9rem; font-weight: 500;">Dados organizados.
+              <br>Decisões mais humanas.
+            </p>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer style="position: relative; overflow: hidden; background-color: var(--navy); padding: 3rem 0;">
-
-    <div class="container" style="position: relative; z-index: 2;">
-      <p style="color: var(--gray-light); margin: 0;">&copy; 2026 Clareia Analytics. Dados organizados. Decisões mais
-        humanas.</p>
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2026 Clareia Analytics. Dados organizados. Decisões mais humanas.</p>
+        <div class="footer-links">
+          <a href="avaliacao-riscos-psicossociais-nr01/">Avaliação NR-01</a>
+          <a href="#expertise">Expertise</a>
+          <a href="#sobre">Sobre</a>
+        </div>
+      </div>
     </div>
-
-    <div class="bg-decorator floating"
-      style="bottom: -10px; left: 2%; width: 200px; opacity: 0.25; position: absolute;">
-      <svg width="200" height="150" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-        <line x1="40" y1="40" x2="40" y2="150" stroke="#FFFFFF" stroke-width="1.5" />
-        <line x1="90" y1="90" x2="90" y2="150" stroke="#FFFFFF" stroke-width="1.5" />
-        <line x1="140" y1="70" x2="140" y2="150" stroke="#6ED3CF" stroke-width="2" />
-
-        <circle cx="40" cy="40" r="4" fill="#FFFFFF" />
-        <circle cx="90" cy="90" r="4" fill="#FFFFFF" />
-        <circle cx="140" cy="70" r="5" fill="#6ED3CF" />
-
-      </svg>
-    </div>
-
   </footer>
 
+  <script src="js/main.js"></script>
 </body>
 
 </html>
