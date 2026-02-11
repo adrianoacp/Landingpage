@@ -333,3 +333,67 @@ footer p {
   line-height: 20px;
   letter-spacing: 2px;
 }
+
+/* --- ELEMENTOS DECORATIVOS (LINE ART) --- */
+section {
+  position: relative;
+  /* Cria o contexto para posicionar os filhos */
+  /* z-index: auto; (padrão) */
+}
+
+.bg-decorator {
+  position: absolute;
+  z-index: 0;
+  /* Fica atrás do conteúdo */
+  pointer-events: none;
+  /* O clique "atravessa" o desenho */
+  opacity: 0.4;
+  /* Bem suave para não brigar com o texto */
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Garante que o conteúdo das seções fique na frente */
+.hero,
+.section-padding,
+header {
+  position: relative;
+  z-index: 1;
+}
+
+/* 3. O Conteúdo: Texto e Imagens (Ficam na frente) */
+.container {
+  position: relative;
+  z-index: 2;
+  /* Camada DOIS (Frente) - Maior que a decoração */
+}
+
+/* Reforço para as imagens específicas */
+.hero-img,
+.feature-img,
+.img-fluid {
+  position: relative;
+  z-index: 2;
+  /* Garante que a imagem esteja na frente da linha */
+  background-color: transparent;
+  /* Ou a cor do fundo se quiser "cortar" a linha */
+}
+
+/* Animação suave (Opcional: faz as linhas flutuarem levemente) */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
