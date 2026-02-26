@@ -1202,10 +1202,6 @@ section {
   flex: 1;
 }
 
-.feature-row.reverse {
-  flex-direction: row-reverse;
-}
-
 .feature-text h3 {
   margin-bottom: 0.5rem;
 }
@@ -1214,12 +1210,38 @@ section {
   margin-bottom: 0.75rem;
 }
 
+/* Imagem quadrada com corte centralizado */
+.feature-img .browser-mockup img,
+.feature-img img.img-fluid,
+.feature-img img.img-shadow {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center top;
+  min-height: unset;
+}
+
 /* Browser mockup frame */
 .browser-mockup {
   background: var(--white);
   border-radius: 8px;
   box-shadow: var(--shadow-md);
   overflow: hidden;
+}
+
+/* Placeholder também quadrado */
+.screenshot-placeholder .placeholder-fallback,
+.feature-img .screenshot-placeholder {
+  aspect-ratio: 1 / 1;
+  min-height: unset;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .feature-row {
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
 
 .browser-mockup::before {
