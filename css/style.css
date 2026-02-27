@@ -1061,6 +1061,92 @@ footer a:hover {
   }
 }
 
+/* ============ Team Grid ============ */
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 600px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.team-member {
+  text-align: center;
+  background: var(--white);
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--gray-light);
+  transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+}
+
+.team-member:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.team-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 1.25rem;
+  overflow: hidden;
+  border: 3px solid var(--teal);
+  position: relative;
+  background: var(--off-white);
+}
+
+.team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.team-photo-fallback {
+  display: none;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-hero);
+  color: var(--white);
+  font-weight: 800;
+  font-size: 1.8rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.team-member h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+}
+
+.team-role {
+  display: inline-block;
+  color: var(--teal);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.team-member p {
+  font-size: 0.9rem;
+  color: var(--gray);
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
 /* ============ Browser Mockup ============ */
 .browser-mockup {
   border-top: 24px solid var(--navy-dark);
@@ -1316,14 +1402,13 @@ section {
   margin-bottom: 0.75rem;
 }
 
-/* Imagem quadrada com corte centralizado */
+/* Imagem ajustada pela largura, sem crop */
 .feature-img .browser-mockup img,
 .feature-img img.img-fluid,
 .feature-img img.img-shadow {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  object-position: center top;
+  height: auto;
+  object-fit: contain;
   min-height: unset;
 }
 
@@ -1335,10 +1420,9 @@ section {
   overflow: hidden;
 }
 
-/* Placeholder também quadrado */
+/* Screenshot placeholder */
 .screenshot-placeholder .placeholder-fallback,
 .feature-img .screenshot-placeholder {
-  aspect-ratio: 1 / 1;
   min-height: unset;
 }
 
