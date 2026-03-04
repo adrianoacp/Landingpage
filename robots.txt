@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://clareiaanalytics.com.br/sitemap.xml
