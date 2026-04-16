@@ -2,14 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://clareiaanalytics.com.br/</loc>
-    <lastmod>2026-03-03</lastmod>
+    <lastmod>2026-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://clareiaanalytics.com.br/avaliacao-riscos-psicossociais-nr01/</loc>
-    <lastmod>2026-03-03</lastmod>
+    <loc>https://clareiaanalytics.com.br/sobre/</loc>
+    <lastmod>2026-04-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clareiaanalytics.com.br/blog/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clareiaanalytics.com.br/blog/nr-1-e-riscos-psicossociais-o-que-muda/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
